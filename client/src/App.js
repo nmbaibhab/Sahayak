@@ -1,17 +1,18 @@
-import React from 'react'
-import Navbar from  './components/Navbar/Navbar'
-import './App.css'
-import {BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavigationBar from "./components/Navbar/Navbar";
+import MainPage from "./pages/MainPage";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-        <div className="App" style={{background: 'black'}}>
-            <Navbar />
-        </div>
-        </BrowserRouter>
-    )
-}
+  return (
+    <div className="container">
+      <NavigationBar />
+      <br/>
+      <br/>
+      <MainPage/>
+      
+    </div>
+  );
+};
 
 export default App;
