@@ -2,3 +2,4 @@ button link unresponsive
 brand name link fix
 add image
 change dummy text
+fix more than 2 cards in a grid columns
