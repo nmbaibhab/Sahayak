@@ -10,20 +10,16 @@ const studentSchema = new Schema({
     type: String,
     required: true,
   },
-  enrollment_num: {
+  enrollmentNum: {
     type: Number,
     required: true,
-    unique: true,
-    trim: true
+    // unique: true,
   },
   query : {
       type: String,
       required: true,
-      minlength: 25
+      minlength: 15
   },
-},
-{
-  timestamps: true
 });
 
 const Student = mongoose.model('Student', studentSchema);

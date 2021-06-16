@@ -24,6 +24,9 @@ const NavigationBar = () => {
           <NavDropdown  title= {<PersonCircle size ={30}/>} id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1"> My Info </NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
+            My Queries
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
             Account Settings
             </NavDropdown.Item>
             <NavDropdown.Divider />

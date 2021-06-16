@@ -10,7 +10,6 @@ const App = () => {
       <br/>
       <br/>
       <MainPage/>
-      
     </div>
   );
 };

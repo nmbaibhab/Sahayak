@@ -10,22 +10,23 @@ router.route('/').get((req,res)=>{
         .catch(err => res.status(400).json('Error:'+ err));
 });
 
-router.route('/add').post((req,res)=>{
+router.route('/add').post(async(req,res)=>{
     const name = req.body.name;
     const university = req.body.university;
-    const enrollment_num = Number(req.body.enrollment_num);
+    const enrollmentNum = Number(req.body.enrollmentNum) ;
     const query = req.body.query;
 
     const newStudent = new student({
         name,
         university,
-        enrollment_num,
+        enrollmentNum,
         query,
     });
+    console.log(newStudent);
 
-    newStudent.save()
+    await newStudent.save()
     .then(()=> res.json('Query Sent'))
-    .catch(err=> res.status(400).json('Error'+err));
+    .catch(err=> {res.status(400).json('Error'+err);console.log(err)});
 });
 
 export default router;

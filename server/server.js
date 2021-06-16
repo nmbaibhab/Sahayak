@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-
+import bodyParser from "body-parser";
 import studentRouter from './routes/student.js';
 import teacherRouter from './routes/teacher.js';
 import adminRouter from './routes/vigilance_admin.js';
@@ -11,7 +11,12 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+
+app.use(bodyParser.json());
 app.use(cors());
 
 const CONNECTION_URL = process.env.DB_URL;
