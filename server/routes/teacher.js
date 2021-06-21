@@ -11,13 +11,17 @@ router.route('/').get((req,res)=>{
 });
 
 router.route('/add').post((req,res)=>{
-    const name = req.body.name;
+    const question_id = req.body.question_id;
+    const query = req.body.query;
+    const teacher_name = req.body.teacher_name;
     const authority_position = req.body.authority_position;
     const reply = req.body.reply;
 
 
     const newTeacher = new teacher({
-        name,
+        question_id,
+        query,
+        teacher_name,
         authority_position,
         reply,
     });

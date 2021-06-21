@@ -3,13 +3,16 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { v4 as uuid } from "uuid";
 
 const StudentForm = () => {
+  // let qnid = uuid();
   const [studentData, setStudentData] = useState({
     name: "",
     university: "",
     enrollmentNum: "",
     query: "",
+    question_id: `${uuid()}`,
   });
 
   const handleSubmit = (e) => {
@@ -26,7 +29,7 @@ const StudentForm = () => {
         Swal.fire("Oops...", "Something went wrong!", "error");
       });
   };
-  // console.log(studentData)
+  console.log(studentData);
   return (
     <div className="p-2">
       <Form className="bg-primary p-3 rounded" onSubmit={handleSubmit}>

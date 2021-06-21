@@ -3,7 +3,15 @@ import mongoose from "mongoose";
 var Schema = mongoose.Schema;
 
 const teacherSchema = new Schema({
-  name: {
+  question_id:{
+    type: String,
+    required: true,
+  },
+  query:{
+    type: String,
+    // required: true,
+  },
+  teacher_name: {
     type: String,
     required: true,
   },
@@ -14,7 +22,7 @@ const teacherSchema = new Schema({
   reply : {
       type: String,
       required: true,
-      minlength: 25
+      minlength: 15
   },
 },
 {

@@ -13,14 +13,17 @@ const studentSchema = new Schema({
   enrollmentNum: {
     type: Number,
     required: true,
-    // unique: true,
+    unique: true,
   },
-  query : {
-      type: String,
-      required: true,
-      minlength: 15
+  query: {
+    type: String,
+    required: true,
+    minlength: 15,
+  },
+  question_id: {
+    type: String,
   },
 });
 
-const Student = mongoose.model('Student', studentSchema);
+const Student = mongoose.model("Student", studentSchema);
 export default Student;

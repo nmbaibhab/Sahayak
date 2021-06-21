@@ -3,7 +3,7 @@ import axios from "axios";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import CardComponent from "../components/Datacard/Card";
+import CardComponent from "../components/Datacard/StudentCard";
 import CardColumns from "react-bootstrap/CardColumns";
 import StudentForm from "../components/Form/Studentform";
 
@@ -22,18 +22,16 @@ const Student = () => {
   }, []);
   console.log(replies);
 
-  const colors = ["danger", "warning", "primary", "success", "info"];
-  let color = Math.floor(Math.random() * colors.length);
-  console.log(color);
+  // console.log(color);
   // console.log(replies[0]);
   return (
     <Container>
       <Row>
         <Col xs={12} md={8} lg={8}>
           <CardColumns>
-            {replies.map((reply) => {
-              <CardComponent bgcolor="primary" />;
-            })}
+            {replies.map((reply) => (
+              <CardComponent reply={reply} />
+            ))}
           </CardColumns>
         </Col>
         <Col xs={6} md={4}>

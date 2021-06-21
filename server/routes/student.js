@@ -15,12 +15,14 @@ router.route('/add').post(async(req,res)=>{
     const university = req.body.university;
     const enrollmentNum = Number(req.body.enrollmentNum) ;
     const query = req.body.query;
+    const question_id = req.body.question_id ;
 
     const newStudent = new student({
         name,
         university,
         enrollmentNum,
         query,
+        question_id,
     });
     console.log(newStudent);
 
