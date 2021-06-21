@@ -9,10 +9,10 @@ const CardComponent = ({ query }) => {
   return (
     <div>
       <Card
+        className="my-3"
         bg={colors[color]}
         text={"black"}
-        style={{ width: "14rem" }}
-        className=""
+        style={{ width: "18rem" }}
       >
         <Card.Header>Query</Card.Header>
         <Card.Header style={{backgroundColor:"green"}}> <b>ID: </b> {query.question_id}</Card.Header>

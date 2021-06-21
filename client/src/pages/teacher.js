@@ -4,7 +4,8 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import CardComponent from "../components/Datacard/TeacherCard";
-import CardColumns from "react-bootstrap/CardColumns";
+// import CardColumns from "react-bootstrap/CardColumns";
+import CardDeck from "react-bootstrap/CardDeck";
 import TeacherForm from "../components/Form/Teacherform";
 
 const Teacher = () => {
@@ -28,11 +29,11 @@ const Teacher = () => {
     <Container>
       <Row>
         <Col xs={12} md={8} lg={8}>
-          <CardColumns>
+          <CardDeck>
             {queries.map((query) => (
               <CardComponent query={query} />
             ))}
-          </CardColumns>
+          </CardDeck>
         </Col>
         <Col xs={6} md={4}>
           <TeacherForm />
@@ -43,4 +44,3 @@ const Teacher = () => {
 };
 
 export default Teacher;
-

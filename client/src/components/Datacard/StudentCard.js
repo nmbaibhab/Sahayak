@@ -6,13 +6,10 @@ const CardComponent = ({ reply }) => {
   console.log(reply);
   const colors = ["danger", "warning", "primary", "success", "info"];
   let color = Math.floor(Math.random() * colors.length);
+
   return (
     <div>
-      <Card
-        bg={colors[color]}
-        text={"black"}
-        style={{ width: "14rem" }}
-      >
+      <Card bg={colors[color]} text={"black"} style={{ width: "18rem" }} className="my-3">
         <Card.Header>Replies</Card.Header>
         <Card.Body>
           <Card.Text>
