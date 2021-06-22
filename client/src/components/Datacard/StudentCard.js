@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Clipboard, ClipboardCheck } from "react-bootstrap-icons";
 // import Col from "react-bootstrap/Col";
+
 const CardComponent = ({ reply }) => {
   console.log(reply);
   const colors = ["danger", "warning", "primary", "success", "info"];
@@ -9,7 +12,12 @@ const CardComponent = ({ reply }) => {
 
   return (
     <div>
-      <Card bg={colors[color]} text={"black"} style={{ width: "18rem" }} className="my-3">
+      <Card
+        bg={colors[color]}
+        text={"black"}
+        style={{ width: "18rem" }}
+        className="my-3"
+      >
         <Card.Header>Replies</Card.Header>
         <Card.Body>
           <Card.Text>
@@ -20,7 +28,7 @@ const CardComponent = ({ reply }) => {
             <b>MyQuery:</b>
             {reply.query}
           </Card.Text>
-          <Card.Text style={{ backgroundColor: "green" }}>
+          <Card.Text style={{ backgroundColor: "yellow" }}>
             {" "}
             <b>Reply: </b>
             {reply.reply}
