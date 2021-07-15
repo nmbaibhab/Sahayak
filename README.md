@@ -7,14 +7,14 @@ Move to server folder
 Create an .env file add your DB_URL and PORT
 
 <h5> How to run server </h5>
-cd server
+<code>cd server</code>
 </br>
 <code>npm i</code>
 </br>
 <code>npm start</code>
 </br>
 <h5>How to run client </h5>
-cd client
+<code>cd client</code>
 </br>
 <code>npm i</code>
 </br>
