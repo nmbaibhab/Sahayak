@@ -1,11 +1,10 @@
 # Sahayak
 Sahayak is a student grievence redressal platform. It helps student to post their queries to orgranizational heads.
 
-# Getting started
+<h5>Getting started</h5>
 </br>
-<h3>Move to server folder</h3>
-</br>
-<h3>Create an .env file add your DB_URL and PORT </h3>
+Move to server folder
+Create an .env file add your DB_URL and PORT
 
 # How to run server ?
 </br>
